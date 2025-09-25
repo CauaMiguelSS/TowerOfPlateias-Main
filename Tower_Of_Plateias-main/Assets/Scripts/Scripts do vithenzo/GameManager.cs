@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public float tempoEntreAutoClicks = 1;
     private float cronometroAutoClick = 0f;
     public int moedasEspeciais = 0;     
-    public int limiteMoedaEspecial = 300;
+    public int multiplicadoresAtivos = 0;
+    public int limiteBonus = 300;
+
     private void Awake()
     {
         if(instance == null)
@@ -44,19 +46,7 @@ public class GameManager : MonoBehaviour
                 cronometroAutoClick = 0f;
             }
         }
-
-        
-        if (TotalMortes >= limiteMoedaEspecial)
-        {
-            GanharMoedaEspecial();
-        }
     }
 
-   
-    private void GanharMoedaEspecial()
-    {
-        moedasEspeciais++;
-        TotalMortes = 0;    
-    }
 
 }

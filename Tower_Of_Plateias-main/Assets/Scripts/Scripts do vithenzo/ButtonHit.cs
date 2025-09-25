@@ -1,37 +1,35 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-public class ButtonHit : MonoBehaviour
+
+public class LojaController : MonoBehaviour
 {
-    [SerializeField] TMP_Text countText;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject botaoBonus;          // botão de multiplicador
+    public TMP_Text textoMultiplicadores;  // texto mostrando quantos multiplicadores
+
     void Start()
     {
-        
+        botaoBonus.SetActive(false); // começa invisível
     }
-    public void ClickMorte()
-    {
-        GameData.contador++;
-        UpdateUI();
-    }
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (GameManager.instance.TotalMortes >= 300)
+            botaoBonus.SetActive(true);
+        else
+            botaoBonus.SetActive(false);
+
+        textoMultiplicadores.text = "Multiplicadores: " + GameManager.instance.multiplicadoresAtivos;
     }
 
-    public void trocaDeCena()
+    public void AtivarBonus()
     {
-        SceneManager.LoadScene("Upgrades");
-    }
-    private void UpdateUI()
-    {
-        countText.text = "Mortes: " + GameData.contador.ToString();
-    }
-
-    public static class GameData
-    {
-        public static int contador = 0;
+        if (GameManager.instance.TotalMortes >= 300)
+        {
+            GameManager.instance.valorDoClick *= 2;
+            GameManager.instance.TotalMortes = 0;
+            GameManager.instance.multiplicadoresAtivos++;
+            botaoBonus.SetActive(false);
+        }
     }
 }
+
