@@ -3,7 +3,7 @@ using TMPro;
 public class UpgradeManeger : MonoBehaviour
 {
     [SerializeField] TMP_Text countText;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
      countText.text = "Mortes: " + GameData.contador.ToString();
@@ -16,7 +16,6 @@ public class UpgradeManeger : MonoBehaviour
 
 
 
-    // Update is called once per frame
     void Update()
     {
         

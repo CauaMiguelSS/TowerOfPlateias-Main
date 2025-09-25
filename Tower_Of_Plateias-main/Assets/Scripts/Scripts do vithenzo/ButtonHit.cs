@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ButtonHit : MonoBehaviour
 {
     [SerializeField] TMP_Text countText;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         
@@ -14,13 +14,12 @@ public class ButtonHit : MonoBehaviour
     {
         GameData.contador++;
         UpdateUI();
-    }
-    // Update is called once per frame
+    }  
+
     void Update()
     {
-        
-    }
 
+    }
     public void trocaDeCena()
     {
         SceneManager.LoadScene("Upgrades");

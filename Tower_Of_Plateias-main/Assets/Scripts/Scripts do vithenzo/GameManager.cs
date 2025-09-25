@@ -11,8 +11,10 @@ public class GameManager : MonoBehaviour
     public int mortesporsegundo = 0;
     public float tempoEntreAutoClicks = 1;
     private float cronometroAutoClick = 0f;
+
     public int moedasEspeciais = 0;     
     public int limiteMoedaEspecial = 300;
+
     private void Awake()
     {
         if(instance == null)
