@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -59,4 +60,8 @@ public class GameManager : MonoBehaviour
         TotalMortes = 0;    
     }
 
+    public static implicit operator GameManager(ManagerGame v)
+    {
+        throw new NotImplementedException();
+    }
 }
