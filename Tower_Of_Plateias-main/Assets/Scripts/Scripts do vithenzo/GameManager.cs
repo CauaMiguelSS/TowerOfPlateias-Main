@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int mortesporsegundo = 0;
     public float tempoEntreAutoClicks = 1;
     private float cronometroAutoClick = 0f;
+    public int moedasEspeciais = 0;     
+    public int limiteMoedaEspecial = 300;
     private void Awake()
     {
         if(instance == null)
@@ -25,24 +27,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(mortesporsegundo > 0)
+        if (mortesporsegundo > 0)
         {
             cronometroAutoClick += Time.deltaTime;
-            if(cronometroAutoClick >= tempoEntreAutoClicks)
+            if (cronometroAutoClick >= tempoEntreAutoClicks)
             {
                 TotalMortes += mortesporsegundo;
                 cronometroAutoClick = 0f;
-              
             }
         }
+
+        
+        if (TotalMortes >= limiteMoedaEspecial)
+        {
+            GanharMoedaEspecial();
+        }
     }
+
+   
+    private void GanharMoedaEspecial()
+    {
+        moedasEspeciais++;
+        TotalMortes = 0;    
+    }
+
 }
