@@ -382,19 +382,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 336850514}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1320296324}
-        m_TargetAssemblyTypeName: UpgradePocao, Assembly-CSharp
-        m_MethodName: ComprarPocao
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &336850514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,6 +570,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countText: {fileID: 1609939391}
+  chanceCritico: 0.1
+  multiplicadorCritico: 2
 --- !u!114 &382257670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1621,7 +1611,8 @@ MonoBehaviour:
   mortesporsegundo: 0
   tempoEntreAutoClicks: 1
   moedasEspeciais: 0
-  limiteMoedaEspecial: 300
+  multiplicadoresAtivos: 0
+  limiteBonus: 300
 --- !u!114 &1320296323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1648,6 +1639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pontosPorClique: 2
+  multiplicador: 1
+  pocaoAtiva: 0
 --- !u!114 &1609939391 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5879442482855395812, guid: 948a320868520404ab709ebbdc6f064b, type: 3}
