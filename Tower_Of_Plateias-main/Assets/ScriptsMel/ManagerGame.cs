@@ -6,11 +6,11 @@ public class ManagerGame : MonoBehaviour
     public float tempoRestante = 0f;
     private void Awake()
     {
-        // Garante que só exista 1 GameManager
+        
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // não destrói ao trocar de cena
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -24,7 +24,7 @@ public class ManagerGame : MonoBehaviour
             tempoRestante -= Time.deltaTime;
             if (tempoRestante <= 0)
             {
-                multiplicador = 1; // volta ao normal
+                multiplicador = 1;
             }
         }
     }
