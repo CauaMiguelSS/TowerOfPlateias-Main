@@ -1041,7 +1041,8 @@ MonoBehaviour:
   mortesporsegundo: 0
   tempoEntreAutoClicks: 1
   moedasEspeciais: 0
-  limiteMoedaEspecial: 300
+  multiplicadoresAtivos: 0
+  limiteBonus: 300
 --- !u!114 &668052216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1378,6 +1379,7 @@ GameObject:
   - component: {fileID: 820630603}
   - component: {fileID: 820630602}
   - component: {fileID: 820630601}
+  - component: {fileID: 820630605}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1401,7 +1403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -264}
+  m_AnchoredPosition: {x: 1, y: -261}
   m_SizeDelta: {x: 289.34, y: 187.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &820630601
@@ -1553,6 +1555,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820630599}
   m_CullTransparentMesh: 1
+--- !u!95 &820630605
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820630599}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f4d88b1418a5764e87693dcaace1dad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1048314478
 GameObject:
   m_ObjectHideFlags: 0

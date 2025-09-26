@@ -7,15 +7,6 @@ public class ManagerGame : MonoBehaviour
     private void Awake()
     {
         
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
     private void Update()
     {
